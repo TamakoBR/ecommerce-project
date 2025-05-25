@@ -122,7 +122,7 @@ def display_products_as_cards(products):
                 if product.get('imagem_url'): # Usar .get para evitar KeyError se a coluna não existir
                     html_img = f'<img src="{product["imagem_url"]}" width="200" height="200" style="object-fit: contain; border-radius: 5px;">'
                     st.markdown(html_img, unsafe_allow_html=True)
-                st.markdown('---') # Separador entre cards
+                st.markdown('---') # Separador entre card
             
             # Se a linha atual estiver cheia e não for o último item, cria novas colunas para a próxima linha
             if (i + 1) % cards_per_row == 0 and (i + 1) < len(products):
